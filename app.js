@@ -1314,6 +1314,253 @@ const styles = StyleSheet.create({
   }
 ];
 
+const codeExplanations = {
+  "1": [
+    [
+      "import { StyleSheet, Text, View } from 'react-native';",
+      "Importamos solo lo que vamos a utilizar. `View` contiene, `Text` muestra texto y `StyleSheet` organiza los estilos."
+    ],
+    [
+      "export default function App() {",
+      "`App` es el componente principal de esta aplicación. Expo mostrará lo que devuelve esta función."
+    ],
+    [
+      "<View style={styles.container}>",
+      "Creamos el contenedor principal y le aplicamos el estilo llamado `container`."
+    ],
+    [
+      "<Text style={styles.title}>React Native</Text>",
+      "Mostramos un texto y le damos mayor jerarquía mediante el estilo `title`."
+    ],
+    [
+      "flex: 1",
+      "Hace que el contenedor ocupe todo el espacio disponible."
+    ],
+    [
+      "justifyContent: 'center'",
+      "Centra los hijos en el eje principal. Como la dirección por defecto es vertical, aquí centra verticalmente."
+    ],
+    [
+      "alignItems: 'center'",
+      "Centra los hijos en el eje transversal, es decir, horizontalmente en este caso."
+    ]
+  ],
+  "2": [
+    [
+      "<View style={styles.card}>",
+      "Creamos un contenedor interior que funcionará como tarjeta."
+    ],
+    [
+      "padding: 28",
+      "Añade espacio interior entre el contenido y el borde de la tarjeta."
+    ],
+    [
+      "borderRadius: 20",
+      "Redondea las esquinas de la tarjeta."
+    ],
+    [
+      "marginTop: 24",
+      "Separa el botón del contenido que tiene encima."
+    ],
+    [
+      "backgroundColor: '#2563eb'",
+      "Aplica el color principal al botón visual."
+    ],
+    [
+      "textAlign: 'center'",
+      "Centra el texto dentro de su propio espacio."
+    ]
+  ],
+  "3": [
+    [
+      "<Image source={{ uri: 'https://i.pravatar.cc/300' }}",
+      "Carga una imagen remota mediante una URL."
+    ],
+    [
+      "width: 110,\nheight: 110",
+      "Define las dimensiones necesarias para mostrar la imagen."
+    ],
+    [
+      "borderRadius: 55",
+      "Al ser la mitad de 110, convierte visualmente la imagen en un círculo."
+    ],
+    [
+      "flexDirection: 'row'",
+      "Cambia la disposición de los hijos de vertical a horizontal."
+    ],
+    [
+      "gap: 36",
+      "Añade separación entre las estadísticas."
+    ],
+    [
+      "alignItems: 'center'",
+      "Centra el contenido dentro de cada bloque de estadística."
+    ]
+  ],
+  "4": [
+    [
+      "<TextInput style={styles.input} placeholder=\"Correo electrónico\" />",
+      "Crea un campo de entrada. `placeholder` muestra una ayuda mientras está vacío."
+    ],
+    [
+      "secureTextEntry",
+      "Oculta visualmente los caracteres introducidos en el campo de contraseña."
+    ],
+    [
+      "<Pressable style={styles.button}>",
+      "Crea una zona pulsable. Aquí nos interesa primero aprender a diseñarla."
+    ],
+    [
+      "backgroundColor: '#f1f5f9'",
+      "Diferencia visualmente los campos respecto al fondo."
+    ],
+    [
+      "marginBottom: 14",
+      "Separa cada campo del siguiente."
+    ]
+  ],
+  "5": [
+    [
+      "overflow: 'hidden'",
+      "Recorta cualquier contenido que sobresalga del borde redondeado de la tarjeta."
+    ],
+    [
+      "width: '100%'",
+      "Hace que la imagen ocupe todo el ancho disponible."
+    ],
+    [
+      "flexDirection: 'row'",
+      "Coloca precio y botón en una misma fila."
+    ],
+    [
+      "justifyContent: 'space-between'",
+      "Separa los elementos hacia extremos opuestos."
+    ],
+    [
+      "alignItems: 'center'",
+      "Los alinea verticalmente dentro de la fila."
+    ]
+  ],
+  "6": [
+    [
+      "flexDirection: 'row'",
+      "Hace que las tarjetas comiencen colocándose horizontalmente."
+    ],
+    [
+      "flexWrap: 'wrap'",
+      "Permite que las tarjetas pasen a una nueva fila cuando ya no caben."
+    ],
+    [
+      "width: '48%'",
+      "Reserva aproximadamente media fila para cada tarjeta."
+    ],
+    [
+      "<Metric title=\"Ventas\" value=\"12.450 €\" change=\"+12%\" />",
+      "Usamos el mismo componente cambiando únicamente sus datos."
+    ],
+    [
+      "function Metric({ title, value, change }",
+      "Define un componente reutilizable que recibe datos mediante props."
+    ]
+  ],
+  "7": [
+    [
+      "<ScrollView style={styles.container}>",
+      "Permite desplazar contenido que supera la altura de la pantalla."
+    ],
+    [
+      "<NewsCard category=\"TECNOLOGÍA\" title=\"...\" />",
+      "Reutiliza el componente NewsCard con datos distintos."
+    ],
+    [
+      "function NewsCard({ category, title }",
+      "Define una sola vez la estructura visual de una noticia."
+    ],
+    [
+      "{category}",
+      "Inserta en el JSX el valor recibido por la prop `category`."
+    ],
+    [
+      "{title}",
+      "Inserta el título recibido por props."
+    ]
+  ],
+  "8": [
+    [
+      "const products = [ ... ]",
+      "Los productos se almacenan primero como datos."
+    ],
+    [
+      "<FlatList",
+      "Componente preparado para representar colecciones."
+    ],
+    [
+      "data={products}",
+      "Indica qué colección debe recorrer FlatList."
+    ],
+    [
+      "keyExtractor={(item) => item.id}",
+      "Define una clave única para cada producto."
+    ],
+    [
+      "renderItem={({ item }) => (",
+      "Define cómo dibujar cada elemento."
+    ],
+    [
+      "numColumns={2}",
+      "Muestra el catálogo en dos columnas."
+    ]
+  ],
+  "9": [
+    [
+      "<Movement title=\"Supermercado\" date=\"Hoy\" amount=\"-42,80 €\" />",
+      "Reutiliza el mismo componente para un movimiento concreto."
+    ],
+    [
+      "type MovementProps = { ... }",
+      "Define qué datos espera recibir el componente."
+    ],
+    [
+      "function Movement({ title, date, amount }: MovementProps)",
+      "Recibe las props y construye una fila con esos datos."
+    ],
+    [
+      "flex: 1",
+      "Permite que la zona de información ocupe el espacio disponible."
+    ],
+    [
+      "flexDirection: 'row'",
+      "Coloca información e importe en una misma fila."
+    ]
+  ],
+  "10": [
+    [
+      "<ScrollView style={styles.container}>",
+      "Permite desplazar la pantalla completa si el contenido es largo."
+    ],
+    [
+      "<View style={styles.progressBackground}>",
+      "Crea el fondo de la barra de progreso."
+    ],
+    [
+      "<View style={styles.progress} />",
+      "Crea la parte visible del progreso dentro del fondo."
+    ],
+    [
+      "width: '75%'",
+      "Representa visualmente un progreso del 75%."
+    ],
+    [
+      "<StatCard icon=\"🔥\" value=\"520\" label=\"Calorías\" />",
+      "Reutiliza una misma tarjeta para distintas métricas."
+    ],
+    [
+      "flexWrap: 'wrap'",
+      "Permite construir el grid de estadísticas en varias filas."
+    ]
+  ]
+};
+
 const quiz = [
   {
     q: "¿Qué componente se utiliza normalmente como contenedor visual básico en React Native?",
@@ -1591,6 +1838,44 @@ function renderIntro() {
       </div>
     </section>
 
+
+    <section class="section">
+      <div class="section-label">TRABAJO EN GITHUB</div>
+      <h2>Cómo vas a organizar el cuaderno</h2>
+      <p>La web es tu guía de aprendizaje. El trabajo real se realiza y se entrega en tu repositorio de GitHub.</p>
+
+      <div class="callout info">
+        <strong>Repositorio:</strong> crea un repositorio llamado <code>02-REACT-NATIVE</code>.
+      </div>
+
+      <h3>Estructura obligatoria</h3>
+      <div class="code-block">
+        <pre><code>02-REACT-NATIVE/
+└── CUADERNO-APRENDIZAJE-01/
+    ├── EJERCICIO-01/
+    │   ├── App.tsx
+    │   └── README.md
+    ├── EJERCICIO-02/
+    │   ├── App.tsx
+    │   └── README.md
+    ├── EJERCICIO-03/
+    │   ├── App.tsx
+    │   └── README.md
+    └── ...
+</code></pre>
+      </div>
+
+      <h3>Orden de trabajo</h3>
+      <div class="steps">
+        <div class="step"><span class="step-number">1</span><p>Crea el repositorio <code>02-REACT-NATIVE</code>.</p></div>
+        <div class="step"><span class="step-number">2</span><p>Crea dentro <code>CUADERNO-APRENDIZAJE-01</code>.</p></div>
+        <div class="step"><span class="step-number">3</span><p>Cada ejercicio tendrá su propia carpeta: <code>EJERCICIO-01</code>, <code>EJERCICIO-02</code>, etc.</p></div>
+        <div class="step"><span class="step-number">4</span><p>Guarda el código en <code>App.tsx</code>.</p></div>
+        <div class="step"><span class="step-number">5</span><p>Responde la pregunta escrita en el <code>README.md</code> de esa carpeta.</p></div>
+        <div class="step"><span class="step-number">6</span><p>Haz <strong>commit y push</strong> antes de continuar con el siguiente ejercicio.</p></div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="section-label">PROGRESIÓN</div>
       <h2>Cómo avanzaremos</h2>
@@ -1626,9 +1911,25 @@ function renderVisual(ex) {
   return visuals[ex.visualType] || "";
 }
 
+
+function renderModifiedPreview(ex) {
+  const previews = {
+    1: `<div class="mock-phone"><div style="text-align:center"><h2 style="margin:0">React Native</h2><p class="mock-muted">Mi primera pantalla</p><p style="margin-top:18px;color:#93c5fd;font-weight:700">Curso 2026/27</p></div></div>`,
+    2: `<div class="mock-phone"><div class="mock-ui-card" style="background:#fff7ed"><h3 style="color:#9a3412">¡Bienvenido!</h3><p class="mock-muted">Diseño de interfaces con React Native</p><div class="mock-button" style="background:#ea580c">COMENZAR</div></div></div>`,
+    3: `<div class="mock-phone"><div class="mock-ui-card" style="text-align:center"><div style="width:84px;height:84px;border-radius:50%;background:#dbeafe;margin:0 auto 12px;display:grid;place-items:center;font-size:34px">👩‍💻</div><h3>Laura Martínez</h3><p class="mock-muted">Diseñadora UX/UI</p><div style="display:flex;justify-content:space-around;margin-top:18px"><b>24<br><small>Proyectos</small></b><b>1280<br><small>Seguidores</small></b><b>86<br><small>Contactos</small></b></div></div></div>`,
+    4: `<div class="mock-phone"><div class="mock-ui-card"><h3>Bienvenido</h3><p class="mock-muted">Introduce tus datos</p><div style="background:#f1f5f9;padding:11px;border-radius:9px;margin:8px 0;color:#94a3b8">Correo electrónico</div><div style="background:#f1f5f9;padding:11px;border-radius:9px;color:#94a3b8">Contraseña</div><div class="mock-button">INICIAR SESIÓN</div><p style="text-align:center;color:#64748b;font-size:13px;margin-bottom:0">¿No tienes cuenta? Regístrate</p></div></div>`,
+    5: `<div class="mock-phone"><div class="mock-ui-card"><div style="height:120px;background:#dbeafe;border-radius:12px;display:grid;place-items:center;font-size:52px">🎧</div><small style="display:inline-block;background:#fee2e2;color:#b91c1c;padding:4px 7px;border-radius:999px;font-weight:800;margin-top:10px">OFERTA</small><h3>Auriculares Wireless</h3><p>⭐ 4.8</p><div style="display:flex;justify-content:space-between;align-items:center"><strong>89,99 €</strong><span style="background:#111827;color:white;padding:8px;border-radius:8px">AÑADIR</span></div></div></div>`,
+    6: `<div class="mock-phone"><h3>Dashboard</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><div class="mock-ui-card"><small>Ventas</small><h3>12.450 €</h3></div><div class="mock-ui-card"><small>Clientes</small><h3>348</h3></div><div class="mock-ui-card"><small>Pedidos</small><h3>1.024</h3></div><div class="mock-ui-card"><small>Conversión</small><h3>7,4%</h3></div><div class="mock-ui-card"><small>Tickets</small><h3>86</h3></div></div></div>`,
+    7: `<div class="mock-phone" style="justify-content:flex-start"><h3>Noticias</h3>${["TECNOLOGÍA","MÓVIL","CLOUD","DISEÑO"].map((c,i)=>`<div class="mock-ui-card" style="margin-bottom:9px"><small style="color:#2563eb">${c}</small><strong style="display:block;margin-top:5px">${["IA y desarrollo","React Native","Arquitecturas cloud","Interfaces accesibles"][i]}</strong></div>`).join("")}</div>`,
+    8: `<div class="mock-phone" style="justify-content:flex-start"><h3>Productos</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">${["⌨️","🖱️","🖥️","🎧","💻","📱"].map((i)=>`<div class="mock-ui-card" style="text-align:center;font-size:30px">${i}</div>`).join("")}</div></div>`,
+    9: `<div class="mock-phone" style="justify-content:flex-start"><p style="margin-bottom:4px">Buenos días 👋</p><h2 style="margin-top:0">Laura</h2><div style="background:#020617;border-radius:18px;padding:18px"><small>Saldo disponible</small><h2>4.280,32 €</h2></div><h3>Movimientos</h3><div class="mock-ui-card" style="margin-bottom:7px"><strong>Nómina</strong><span style="float:right;color:#16a34a;font-weight:800">+2.340 €</span></div><div class="mock-ui-card" style="margin-bottom:7px"><strong>Supermercado</strong><span style="float:right">-42,80 €</span></div></div>`,
+    10: `<div class="mock-phone" style="justify-content:flex-start"><p style="margin:0">Buenos días,</p><h2>Laura 👋</h2><div style="background:#052e16;border-radius:18px;padding:18px"><small>OBJETIVO DIARIO</small><h2>8.200</h2><div style="height:8px;background:#14532d;border-radius:5px"><div style="width:82%;height:100%;background:#4ade80;border-radius:5px"></div></div></div><h3>Resumen</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">${["🔥 610","⏱ 55 min","❤️ 69","📍 6,3 km"].map(x=>`<div class="mock-ui-card"><strong>${x}</strong></div>`).join("")}</div></div>`
+  };
+  return previews[ex.id] || renderVisual(ex);
+}
+
 function renderExercise(ex) {
   setHeader(`EJERCICIO ${String(ex.id).padStart(2, "0")}`, ex.title);
-  const savedCode = state.code[ex.id] || "";
   const savedReflection = state.reflections[ex.id] || "";
   const savedCheckpoints = state.checkpoints[ex.id] || [];
   const answered = state.exerciseAnswers[ex.id];
@@ -1664,30 +1965,110 @@ function renderExercise(ex) {
     </section>
 
     <section class="section">
-      <div class="section-label">PRÁCTICA GUIADA</div>
-      <h2>Requisitos obligatorios</h2>
-      <ul>${ex.requirements.map(r => `<li>${r}</li>`).join("")}</ul>
+      <div class="section-label">CÓDIGO EXPLICADO</div>
+      <h2>Lee, observa, entiende y modifica</h2>
+      <p>Estamos en modo aprendizaje. Primero lee qué hace el ejercicio, después observa el código completo, luego entiende sus líneas clave y finalmente modifica pequeñas partes.</p>
 
-      <h3>Avanza por pasos</h3>
-      <div class="steps">
-        ${ex.steps.map((step, index) => `
-          <div class="step">
-            <span class="step-number">${index + 1}</span>
-            <p>${step}</p>
+      <div class="learning-sequence">
+        <span>1 · Lee</span>
+        <span>2 · Observa el código completo</span>
+        <span>3 · Entiende</span>
+        <span>4 · Modifícalo</span>
+      </div>
+
+      <h3>2 · Observa el código completo</h3>
+      <div class="learning-note"><strong>Primero mira el programa entero:</strong> familiarízate con su forma general antes de analizar cada línea.</div>
+      ${codeBlock(ex.solution)}
+
+      <h3>3 · Entiende las líneas importantes</h3>
+      <div class="code-learning">
+        ${(codeExplanations[ex.id] || []).map(([code, explanation]) => `
+          <div class="code-explanation-row">
+            <code>${escapeHtml(code)}</code>
+            <p>${explanation}</p>
           </div>
         `).join("")}
       </div>
+    </section>
 
-      <h3>Tu código</h3>
-      <div class="editor-wrap">
-        <div class="editor-toolbar">
-          <span>App.tsx · guardado automático</span>
-          <div class="editor-actions">
-            <button data-copy-editor="${ex.id}">Copiar</button>
-            <button data-clear-editor="${ex.id}">Limpiar</button>
+    <section class="section">
+      <div class="section-label">4 · MODIFÍCALO</div>
+      <h2>Modifica el ejemplo en tu repositorio</h2>
+      <p>Parte del código completo anterior y realiza la modificación en tu repositorio de GitHub. Usa el preview como referencia visual.</p>
+
+      <div class="modify-layout">
+        <div class="modify-steps">
+          <h3>Condiciones que debes conservar</h3>
+          <ul>${ex.requirements.map(r => `<li>${r}</li>`).join("")}</ul>
+
+          <h3>Avanza por pasos</h3>
+          <div class="steps">
+            ${ex.steps.map((step, index) => `
+              <div class="step">
+                <span class="step-number">${index + 1}</span>
+                <p>${step}</p>
+              </div>
+            `).join("")}
           </div>
         </div>
-        <textarea class="code-editor" data-editor="${ex.id}" spellcheck="false" placeholder="// Escribe o pega aquí tu solución...">${escapeHtml(savedCode)}</textarea>
+
+        <aside class="modify-preview">
+          <div class="preview-sticky">
+            <div class="preview-caption">
+              <strong>Preview del resultado esperado</strong>
+              <span>Referencia visual</span>
+            </div>
+            <div class="visual">${renderModifiedPreview(ex)}</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="section-label">ENTREGA EN GITHUB</div>
+      <h2>Qué debes subir al terminar este ejercicio</h2>
+
+      <div class="info-grid">
+        <div class="mini-card">
+          <strong>Carpeta</strong>
+          <small><code>CUADERNO-APRENDIZAJE-01/EJERCICIO-${String(ex.id).padStart(2, "0")}/</code></small>
+        </div>
+        <div class="mini-card">
+          <strong>App.tsx</strong>
+          <small>El ejemplo trabajado y la modificación solicitada.</small>
+        </div>
+        <div class="mini-card">
+          <strong>README.md</strong>
+          <small>Tu respuesta escrita y una breve explicación de lo que has cambiado.</small>
+        </div>
+      </div>
+
+      <h3>Plantilla del README.md</h3>
+      ${codeBlock(`# Ejercicio ${String(ex.id).padStart(2, "0")} - ${ex.title}
+
+## Qué he aprendido
+- ...
+
+## Respuesta a la pregunta de comprensión
+${ex.reflection}
+
+Respuesta:
+...
+
+## Qué he modificado
+- ...
+
+## Resultado
+Explica brevemente cómo ha quedado la interfaz.`)}
+
+      <h3>Commit y push</h3>
+      ${codeBlock(`git add .
+git commit -m "Ejercicio ${String(ex.id).padStart(2, "0")} - ${ex.title}"
+git push`)}
+
+      <div class="callout warning">
+        <strong>Antes de pasar al siguiente ejercicio:</strong> comprueba en GitHub que la carpeta, <code>App.tsx</code> y <code>README.md</code> están subidos.
       </div>
     </section>
 
@@ -1727,24 +2108,15 @@ function renderExercise(ex) {
     </section>
 
     <section class="section">
-      <div class="section-label">EXPLICA</div>
+      <div class="section-label">README.md</div>
       <h2>Pregunta de comprensión</h2>
       <p>${ex.reflection}</p>
-      <textarea class="reflection" data-reflection="${ex.id}" placeholder="Explícalo con tus propias palabras...">${escapeHtml(savedReflection)}</textarea>
-    </section>
-
-    <section class="section">
-      <div class="section-label">AYUDA PROGRESIVA</div>
-      <h2>Úsala solo cuando la necesites</h2>
-      <div class="reveal-stack">
-        ${revealButton("Pista 1", ex.hints[0], "hint")}
-        ${revealButton("Pista 2", ex.hints[1], "hint")}
-        ${revealButton("Pseudocódigo / código parcial", codeBlock(ex.partial), "partial", true)}
-        ${revealButton("Solución orientativa", `<p><strong>Esta es una solución posible. Pueden existir soluciones equivalentes.</strong></p>${codeBlock(ex.solution)}`, "solution", true)}
+      <div class="callout info">
+        <strong>Responde por escrito en:</strong><br>
+        <code>CUADERNO-APRENDIZAJE-01/EJERCICIO-${String(ex.id).padStart(2, "0")}/README.md</code>
       </div>
     </section>
-
-    <section class="section">
+<section class="section">
       <div class="section-label">RETO</div>
       <h2>Ahora modifica algo por tu cuenta</h2>
       <div class="callout warning">${ex.challenge}</div>
@@ -1783,18 +2155,18 @@ function feedbackHtml(ex, selected) {
 }
 
 function renderQuiz() {
-  setHeader("TEST FINAL", "Comprueba lo aprendido");
+  setHeader("REPASO FINAL", "Recupera lo aprendido");
   const score = state.quizScore;
 
   appContent.innerHTML = `
     <div class="quiz-header">
       <div>
-        <span class="section-label">RECUPERACIÓN FINAL</span>
-        <h1 style="margin:0">Test de 20 preguntas</h1>
-        <p style="color:#64748b;max-width:720px">Combina conceptos, lectura de código y errores típicos. Al corregir recibirás una explicación de cada respuesta.</p>
+        <span class="section-label">REPASO DE APRENDIZAJE</span>
+        <h1 style="margin:0">20 preguntas para repasar</h1>
+        <p style="color:#64748b;max-width:720px">Úsalas para recuperar conceptos, leer código y detectar errores típicos. No es una evaluación: al comprobar recibirás una explicación para seguir aprendiendo.</p>
       </div>
       <div class="quiz-score">
-        <small>RESULTADO</small>
+        <small>ACIERTOS</small>
         <strong>${score === null ? "—" : `${score}/20`}</strong>
       </div>
     </div>
@@ -1820,8 +2192,8 @@ function renderQuiz() {
     }).join("")}
 
     <div class="quiz-actions">
-      <button class="primary-button" id="correctQuiz">Corregir test</button>
-      <button class="secondary-button" id="resetQuiz">Reiniciar solo el test</button>
+      <button class="primary-button" id="correctQuiz">Comprobar respuestas</button>
+      <button class="secondary-button" id="resetQuiz">Reiniciar repaso</button>
     </div>
   `;
 
@@ -1855,47 +2227,6 @@ function bindDynamicEvents() {
       const code = btn.nextElementSibling.innerText;
       navigator.clipboard.writeText(code);
       toast("Código copiado");
-    });
-  });
-
-  document.querySelectorAll("[data-editor]").forEach(editor => {
-    editor.addEventListener("input", e => {
-      const id = Number(e.target.dataset.editor);
-      state.code[id] = e.target.value;
-      saveState();
-    });
-
-    editor.addEventListener("keydown", e => {
-      if (e.key === "Tab") {
-        e.preventDefault();
-        const start = e.target.selectionStart;
-        const end = e.target.selectionEnd;
-        e.target.value = e.target.value.substring(0, start) + "  " + e.target.value.substring(end);
-        e.target.selectionStart = e.target.selectionEnd = start + 2;
-        state.code[Number(e.target.dataset.editor)] = e.target.value;
-        saveState();
-      }
-    });
-  });
-
-  document.querySelectorAll("[data-copy-editor]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const id = Number(btn.dataset.copyEditor);
-      const editor = document.querySelector(`[data-editor="${id}"]`);
-      navigator.clipboard.writeText(editor.value);
-      toast("Tu código se ha copiado");
-    });
-  });
-
-  document.querySelectorAll("[data-clear-editor]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const id = Number(btn.dataset.clearEditor);
-      const editor = document.querySelector(`[data-editor="${id}"]`);
-      if (confirm("¿Quieres vaciar el editor de este ejercicio?")) {
-        editor.value = "";
-        state.code[id] = "";
-        saveState(true);
-      }
     });
   });
 
@@ -1988,7 +2319,7 @@ function bindDynamicEvents() {
   });
 
   document.getElementById("resetQuiz")?.addEventListener("click", () => {
-    if (confirm("¿Reiniciar únicamente las respuestas del test?")) {
+    if (confirm("¿Reiniciar únicamente las respuestas del repaso?")) {
       state.quizAnswers = {};
       state.quizCorrected = false;
       state.quizScore = null;
@@ -1998,3 +2329,67 @@ function bindDynamicEvents() {
     }
   });
 }
+
+function navigate(screen) {
+  state.screen = screen;
+  saveState();
+  sidebar.classList.remove("open");
+  render();
+}
+
+function orderedScreens() {
+  return ["intro", ...exercises.map(ex => `exercise-${ex.id}`), "quiz"];
+}
+
+function move(delta) {
+  const screens = orderedScreens();
+  const index = screens.indexOf(state.screen);
+  const target = screens[index + delta];
+  if (target) navigate(target);
+}
+
+function toast(message) {
+  const el = document.getElementById("toast");
+  el.textContent = message;
+  el.classList.add("show");
+  setTimeout(() => el.classList.remove("show"), 1500);
+}
+
+document.addEventListener("click", e => {
+  const nav = e.target.closest("[data-screen]");
+  if (nav) navigate(nav.dataset.screen);
+});
+
+prevButton.addEventListener("click", () => move(-1));
+nextButton.addEventListener("click", () => move(1));
+
+completeButton.addEventListener("click", () => {
+  if (!state.screen.startsWith("exercise-")) return;
+  const id = Number(state.screen.split("-")[1]);
+  const set = new Set(state.completed);
+  if (set.has(id)) {
+    set.delete(id);
+    toast("Ejercicio marcado como pendiente");
+  } else {
+    set.add(id);
+    toast("Ejercicio completado");
+  }
+  state.completed = [...set].sort((a,b) => a-b);
+  saveState();
+  render();
+});
+
+document.getElementById("resetProgress").addEventListener("click", () => {
+  if (confirm("Se borrará todo el código, respuestas, test y progreso guardado en este navegador. ¿Continuar?")) {
+    localStorage.removeItem(STORAGE_KEY);
+    state = { ...defaultState };
+    render();
+    toast("Progreso reiniciado");
+  }
+});
+
+document.getElementById("menuButton").addEventListener("click", () => {
+  sidebar.classList.toggle("open");
+});
+
+render();
